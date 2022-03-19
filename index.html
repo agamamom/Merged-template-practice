@@ -52,18 +52,17 @@
         <div class="header-nav">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 nav-left">
                         <a href="#" class="d-flex">
                             <span>M</span>
                             <p>
-                                erged
+                                ERGED
                             </p>
                         </a>
                     </div>
-                    <div class="col-6">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="col-6 nav-right">
+                        <nav class="navbar navbar-expand-lg">
                             <div class="container-fluid">
-                                <a class="navbar-brand" href="#">Navbar</a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -72,24 +71,26 @@
                                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            <a class="nav-link activeTabs" aria-current="page" href="#">HOME</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Features</a>
+                                            <a class="nav-link" href="#">ABOUT</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Pricing</a>
+                                            <a class="nav-link" href="#">GALLERY</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Dropdown link
+                                                PAGES
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                <li><a class="dropdown-item" href="#">Codes</a></li>
+                                                <li><a class="dropdown-item" href="#">About</a></li>
                                             </ul>
+                                        </li>
+                                        <li class="nav-item me-0">
+                                            <a class="nav-link" href="#">CONTACT</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -100,6 +101,57 @@
             </div>
         </div>
     </header>
+    <section class="banner position-relative">
+        <div class="banner-wrap">
+            <div class="container">
+                <div class="owl-carousel owl-theme banner-carousel">
+                    <div class="item">
+                        <h2>
+                            OPEN MINDS. CREATING FUTURE.
+                        </h2>
+                        <p>
+                            Etiam Vitae Augue Odio. Ut Laoreet Ipsum Vel Ultrices Viverra. Donec Nisl Dolor, Mollis Vel
+                            Libero Id, Tempor Cursus Lectus. Vestibulum Eu Ligula Et Pharetra Efficitur. Maecenas
+                            Eleifend.
+                        </p>
+                        <div class="banner-button">
+                            <a href="#" class="btn-outline">About Us</a>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            THE BEST BUSINESS SUPPORT
+                        </h2>
+                        <p>
+                            Etiam Vitae Augue Odio. Ut Laoreet Ipsum Vel Ultrices Viverra. Donec Nisl Dolor, Mollis Vel
+                            Libero Id, Tempor Cursus Lectus. Vestibulum Eu Ligula Et Pharetra Efficitur. Maecenas
+                            Eleifend.
+                        </p>
+                        <div class="banner-button">
+                            <a href="#" class="btn-outline">About Us</a>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>
+                            SERVICES TO GROW YOUR BUSINESS
+                        </h2>
+                        <p>
+                            Etiam Vitae Augue Odio. Ut Laoreet Ipsum Vel Ultrices Viverra. Donec Nisl Dolor, Mollis Vel
+                            Libero Id, Tempor Cursus Lectus. Vestibulum Eu Ligula Et Pharetra Efficitur. Maecenas
+                            Eleifend.
+                        </p>
+                        <div class="banner-button">
+                            <a href="#" class="btn-outline">About Us</a>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
@@ -108,6 +160,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <!-- CAROUSEL -->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <script>
+        $('.banner-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            mouseDrag: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+    <!-- ACTIVE -->
+    <script>
+        // Add active class to the current button (highlight it)
+
+        var tabs = document.getElementsByClassName("nav-link");
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("activeTabs");
+                current[0].className = current[0].className.replace(" activeTabs", "");
+                this.className += " activeTabs";
+            });
+        }
+    </script>
 
 </body>
 

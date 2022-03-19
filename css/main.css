@@ -1,6 +1,7 @@
 /* Reset */
 * {
-    font-family: "Lato", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+        sans-serif;
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -20,6 +21,7 @@ html {
 body {
     font-size: 15px;
     line-height: 1.6;
+    font-family: "Lato", sans-serif;
 }
 ol,
 ul {
@@ -45,6 +47,8 @@ p {
 }
 
 /* Style */
+
+/* HEADER */
 .top-header {
     background: #363d41;
     padding: 8px 0;
@@ -56,9 +60,10 @@ p {
 .top-header .top__left .nav-link i {
     color: aliceblue;
     font-size: 1.6rem;
-    margin-left: 12px;
+    margin-right: 12px;
     transition: 0.3s all;
 }
+
 .top-header .top__left .nav-link i:hover {
     color: #0077b5;
 }
@@ -71,4 +76,83 @@ p {
 .top__right i {
     color: aliceblue;
     line-height: 34px;
+}
+.header-nav {
+    padding: 5px 0;
+}
+.header-nav .nav-left a {
+    text-decoration: none;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-left: 6px;
+    font-weight: 600;
+}
+.header-nav .nav-left a span {
+    font-size: 3.8rem;
+    color: #7f67f8;
+}
+.header-nav .nav-left a span + p {
+    letter-spacing: 2px;
+    margin-left: 3px;
+    color: #868c94;
+    line-height: 70px;
+}
+.nav-right {
+    text-align: right;
+}
+.nav-right .navbar {
+    margin-top: 14px;
+}
+.nav-right .navbar .nav-item,
+.nav-right .navbar .nav-item + .nav-item {
+    margin-right: 20px;
+}
+.nav-right .navbar .nav-item .nav-link {
+    color: #363d41;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: 0.3s all;
+    letter-spacing: 1.2px;
+}
+.nav-right .navbar .nav-item .nav-link:hover {
+    color: #7f67f8;
+}
+.nav-right .navbar .navbar-collapse {
+    justify-content: end;
+}
+.nav-right .dropdown .dropdown-menu {
+    margin-top: 0;
+    padding: 0.9rem 0;
+    border-radius: 0.5rem;
+    left: -8px;
+}
+.nav-right .dropdown .dropdown-menu li {
+    line-height: 28px;
+    width: 150px;
+}
+.nav-right .dropdown .dropdown-menu li:first-child {
+    border-bottom: 0.8px solid rgba(0, 0, 0, 0.116);
+    padding-bottom: 0.9rem;
+}
+.nav-right .dropdown .dropdown-menu li:last-child {
+    padding-top: 0.9rem;
+}
+.nav-right .dropdown .dropdown-menu .dropdown-item {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    transition: 0.5s all;
+    padding-left: 22px;
+}
+.nav-right .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #e9ecef7a;
+}
+.nav-right .navbar .nav-item .activeTabs {
+    color: #7f67f8;
+}
+/* BANNER */
+.banner {
+    background-image: url("/img/b1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
 }
