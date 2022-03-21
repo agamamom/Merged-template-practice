@@ -64,14 +64,16 @@
                         </a>
                     </div>
                     <div class="col-6 nav-right">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <nav class="navbar navbar-expand-lg navbar-light position-relative">
                             <div class="container-fluid">
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                                     aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon" style="
+                                    height: 20px;
+                                    width: 30px;"></span>
                                 </button>
-                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <div class=" collapse navbar-collapse position-absolute" id="navbarNavDropdown">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
                                             <a class="nav-link activeTabs" aria-current="page" href="#">HOME</a>
@@ -188,7 +190,7 @@
     </section>
     <section class="layout-bottom section">
         <div class="container">
-            <div class="layout-content d-flex justify-content-around align-items-center">
+            <div class="layout-content d-flex justify-content-around align-items-center flex-column flex-lg-row">
                 <p>We Make the Best Business Solutions</p>
                 <a href="#" class="btn-outline">Contact Us</a>
             </div>
@@ -199,19 +201,19 @@
             <h2 class="title">We are always ahead Proffesional solutions for your business.</h2>
             <p class="title--under">Our results will fascinate you with the results we have</p>
             <div class="row">
-                <div class="col-4 stats-item">
+                <div class="col-12 col-sm-4 mb-5 mb-sm-0 stats-item">
                     <p class="counterNum">1,546</p>
                     <p>Satisfied Clients</p>
                     <p>
                         Pure satisfaction
                     </p>
                 </div>
-                <div class="col-4 stats-item">
+                <div class="col-12 col-sm-4 mb-5 mb-sm-0 stats-item">
                     <p class="counterNum"> 14,345</p>
                     <p>Successful Investments</p>
                     <p>Net income</p>
                 </div>
-                <div class="col-4 stats-item">
+                <div class="col-12 col-sm-4 mb-5 mb-sm-0 stats-item">
                     <p class="counterNum">563</p>
                     <p>Branches Worldwide</p>
                     <p>Highest level of credibility</p>
@@ -227,7 +229,7 @@
             <p class="title--under">Our team provides consulting services focusing on the most critical business issues.
             </p>
             <div class="row services-content">
-                <div class="col-4 services-items">
+                <div class="col-12 col-sm-4 services-items">
                     <i class="fa-solid fa-arrows-up-down-left-right"></i>
                     <h5>
                         Commodities
@@ -236,7 +238,7 @@
                         Taque earum rerum hitaque tenetur rum sapiente
                     </p>
                 </div>
-                <div class="col-4 services-items">
+                <div class="col-12 col-sm-4 services-items">
                     <i class="fa-solid fa-chart-column"></i>
                     <h5>
                         Analysis
@@ -245,7 +247,7 @@
                         Taque earum rerum hitaque tenetur rum sapiente
                     </p>
                 </div>
-                <div class="col-4 services-items">
+                <div class="col-12 col-sm-4 services-items">
                     <i class="fa-solid fa-bitcoin-sign"></i>
                     <h5>
                         Consulting
@@ -254,7 +256,7 @@
                         Taque earum rerum hitaque tenetur rum sapiente
                     </p>
                 </div>
-                <div class="col-4 services-items">
+                <div class="col-12 col-sm-4 services-items">
                     <i class="fa-solid fa-gears"></i>
                     <h5>
                         Forecasting
@@ -263,7 +265,7 @@
                         Taque earum rerum hitaque tenetur rum sapiente
                     </p>
                 </div>
-                <div class="col-4 services-items">
+                <div class="col-12 col-sm-4 services-items">
                     <i class="fa-solid fa-bullseye"></i>
                     <h5>
                         Financial
@@ -272,7 +274,7 @@
                         Taque earum rerum hitaque tenetur rum sapiente
                     </p>
                 </div>
-                <div class="col-4 services-items">
+                <div class="col-12 col-sm-4 services-items">
                     <i class="fa-solid fa-cubes"></i>
                     <h5>
                         Assurance
@@ -329,7 +331,7 @@
     <section class="footer section">
         <div class="container">
             <div class="row">
-                <div class="col-6 footer__firstColumn">
+                <div class="col-12 col-md-6  footer__firstColumn">
                     <h3>Subscribe Newsletter</h3>
                     <p>By subscribing to our mailing list you will always get latest news from us.</p>
                     <form class="form-email">
@@ -345,7 +347,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-2 footer__secondColumn">
+                <div class="col-12 col-md-2 mt-5 mt-sm-0  footer__secondColumn">
                     <h3>Our Links</h3>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -354,7 +356,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-4 footer__thirdColumn">
+                <div class="col-12 col-md-4 mt-5 mt-sm-0 footer__thirdColumn">
                     <h3>Contact Us</h3>
                     <div class="footer-address d-flex align-items-baseline">
                         <i class="fa-solid fa-location-dot pink-icon"></i>
@@ -435,9 +437,9 @@
             autoplayTimeout: 4000,
             responsive: {
                 0: {
-                    items: 1
+                    items: 2
                 },
-                600: {
+                768: {
                     items: 3
                 },
                 1000: {
